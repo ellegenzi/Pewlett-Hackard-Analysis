@@ -1,4 +1,5 @@
 -- Creating tables for PH-EmployeeDB
+
 CREATE TABLE departments (
 	dept_no VARCHAR(4) NOT NULL,
 	dept_name VARCHAR(40) NOT NULL,
@@ -11,7 +12,7 @@ CREATE TABLE employees (
 	first_name VARCHAR(20) NOT NULL,
 	last_name VARCHAR(50) NOT NULL,
 	gender VARCHAR (10) NOT NULL,
-	hire_date DATE,
+	hire_date DATE NOT NULL,
 	PRIMARY KEY (emp_no)
 );
 CREATE TABLE dept_manager (
@@ -49,3 +50,8 @@ CREATE TABLE titles (
 	PRIMARY KEY (emp_no)
 );
 SELECT * FROM departments;
+SELECT * FROM employees;
+SELECT * FROM dept_manager;
+SELECT * FROM dept_emp;
+SELECT * FROM salaries;
+SELECT * FROM titles;
