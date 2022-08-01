@@ -98,6 +98,7 @@ SELECT * FROM current_emp;
 
 -- Employee count by department number
 SELECT COUNT(ce.emp_no), de.dept_no
+INTO dept_count
 FROM current_emp AS ce
 LEFT JOIN dept_emp AS de
 ON ce.emp_no = de.emp_no
@@ -160,3 +161,36 @@ INNER JOIN dept_emp AS de
 ON (ce.emp_no = de.emp_no)
 INNER JOIN departments AS d
 ON (de.dept_no = d.dept_no);
+
+-- Tailored Lists
+-- Create a query that will return only the information relevant to the
+-- Sales team.
+
+-- Retirees in Sales
+SELECT ri.emp_no,
+	ri.first_name,
+	ri.last_name,
+	d.dept_name
+INTO sales_info
+FROM retirement_info AS ri
+INNER JOIN dept_emp AS de
+ON (ri.emp_no = de.emp_no)
+INNER JOIN departments AS d
+ON (de.dept_no = d.dept_no)
+WHERE (d.dept_no = 'd007');
+
+-- Create another query that will return relevant information for the
+-- Sales and Development teams.
+
+-- Mentor list for Sales and Development teams
+SELECT ri.emp_no,
+	ri.first_name,
+	ri.last_name,
+	d.dept_name
+INTO mentor_info
+FROM retirement_info AS ri
+INNER JOIN dept_emp AS de
+ON (ri.emp_no = de.emp_no)
+INNER JOIN departments AS d
+ON (de.dept_no = d.dept_no)
+WHERE d.dept_no IN ('d007', 'd005');
