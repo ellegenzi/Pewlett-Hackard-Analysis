@@ -13,10 +13,15 @@ Bobby is an up and coming HR analyst who is tasked with performing employee rese
 
 ## Results
 
+### Retiring Employees by Title
+
 + There are a total of 72,458 employees eligible to retire from Pewlett-Hackard.
 + Roughly 70% (50,842 employees) are senior level employees.
 + Roughly half (36,291 employees) are engineers.
-+ Only 1,549 employees are eligible for the mentorship program.
+
+### Employees Eligible for Mentorship
+
++ Only 1,549 employees are currently eligible for the mentorship program.
     - This means each mentor would have to take on up to 47 mentees in order for each new employee to have a mentor, which is unrealistic.
 
 ## Summary
